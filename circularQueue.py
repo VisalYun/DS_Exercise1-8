@@ -1,4 +1,4 @@
-class CircularQueue():
+class CircularQueue:
 
     # constructor
     def __init__(self, size):  # initializing the class
@@ -76,3 +76,28 @@ class CircularQueue():
             print("\n\n~~Circular Queue Overflow~~")
         else:
             print("No overflow or underflow")
+
+
+isTrue = True
+length = int(input(print("Queue need to be created, Enter Queue length")))
+ob = CircularQueue(length)
+while isTrue:
+
+    print("1- Insert an Element on toCircular QUEUE")
+    print("2- Delete an Element from Circular QUEUE")
+    print("3- Demonstrate Overflow and Underflow situations on Circular QUEUE")
+    print("4- Display the status of Circular QUEUE")
+    print("5- Exit")
+    inp = int(input("Enter number: "))
+    if inp == 1:
+        ob.enqueue(input(print("Enter element: ")))
+    elif inp == 2:
+        print("Deleted value = ", ob.dequeue())
+    elif inp == 3:
+        ob.overAndUnderFlow(length)
+    elif inp == 4:
+        ob.display()
+    elif inp == 5:
+        isTrue = False
+    else:
+        print("Wrong INPUT...")
