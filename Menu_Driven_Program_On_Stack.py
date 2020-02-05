@@ -46,7 +46,6 @@ while True:
     if select == "1":
         S.push(int(input("Data to push: ")))
 
-
     elif select == "2":
         if S.is_empty():
             print('Stack is empty.')
