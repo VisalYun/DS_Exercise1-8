@@ -11,6 +11,7 @@ class Stack:
             self.items.append(data)
         else:
             print("# Cannot push: Stack meet maximum size #")
+            
     def pop(self):
         return self.items.pop()
 
@@ -22,7 +23,7 @@ class Stack:
     def Over_Underflow(self):
         if self.items == []:
             print("Underflow Situation if you try to pop the value")
-        elif self.MAX == 3:
+        elif len(self.items) == self.MAX:
             print("Overflow Condition if you try to push the value")
         else: print("Not in both conditions")
 
@@ -38,7 +39,7 @@ print("""           ***Stack Menu***
     5. Display the status of Stack
     6. Exit
     """)
-S = Stack(MAX=3)
+S = Stack(MAX=int(input("Enter the size of the Stack: ")))
 while True:
     select = input("^Choose the Menu:^ ")
 
